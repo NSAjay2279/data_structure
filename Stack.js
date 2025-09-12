@@ -17,6 +17,7 @@ class Stack {
     this.top = newNode;
   }
 
+  // Pop operation (O(1))
   pop() {
     if (this.top === null) {
       console.log("Stack Underflow");
@@ -40,8 +41,6 @@ class Stack {
   isEmpty() {
     return this.top === null;
   }
-
-
 }
 
 const stack = new Stack();
