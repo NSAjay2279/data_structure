@@ -17,8 +17,29 @@ class Stack {
     this.top = newNode;
   }
 
+  pop() {
+    if (this.top === null) {
+      console.log("Stack Underflow");
+      return -1;  // Error value
+    }
+    const popped = this.top.data;
+    this.top = this.top.next;
+    return popped;
+  }
 
+  // Peek operation (O(1))
+  peek() {
+    if (this.top === null) {
+      console.log("Stack is empty");
+      return -1;  // Error value
+    }
+    return this.top.data;
+  }
 
+  // Check if stack is empty
+  isEmpty() {
+    return this.top === null;
+  }
 
 
 }
@@ -28,8 +49,7 @@ const stack = new Stack();
 stack.push(10);
 stack.push(20);
 stack.push(30);
-stack.push(40);
-stack.push(50);
-stack.push(60);
 
-console.log(stack);
+console.log("Top element:", stack.peek());  // 30
+console.log("Popped:", stack.pop());        // 30
+console.log("Top element:", stack.peek());       // 20
