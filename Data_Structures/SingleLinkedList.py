@@ -14,20 +14,14 @@ class SingleLinkedList:
       if self.tail != None:
          self.tail.next = node
          self.tail = node
+         self.size += 1
          return  
       self.head = node
       self.tail = node
       self.tail.next = None
+      self.size += 1   
       
    def length(self):
-        current = self.head
-        if current != None:
-            self.size += 1
-            while current.next:
-               self.size += 1
-               current = current.next
-        else:
-            return 0
         return self.size
       
    def __str__(self):
@@ -50,3 +44,4 @@ words.append(3)
 words.append(3)
 print(words)
 print(words.length())
+
