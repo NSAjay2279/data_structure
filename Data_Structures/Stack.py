@@ -10,7 +10,6 @@ class Stack:
   def pop(self):
     if self.count == 0:
       return None
-    
     self.count -= 1
     result = self.storage[self.count]
     del self.storage[self.count]
