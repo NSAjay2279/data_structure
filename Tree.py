@@ -6,8 +6,8 @@ class TreeNode:
 
 class QueueNode:
     def __init__(self, data=None):
-        self.data = data
-        self.next = None
+        self.data = data  # 2
+        self.next = None  # 
 
 class Queue:
     def __init__(self):
@@ -37,12 +37,12 @@ class Queue:
 class Tree:
     def __init__(self):
         self.root = None
-    
+
     def insert(self, val):
-        if not self.root:
-            self.root = TreeNode(val)
+        if not self.root: # intitally root references to None object
+            self.root = TreeNode(val) # now, root references to Tree object (with val ref. to 1<int type object>, left ref. to None, right ref. to None) 
             return
-        queue = Queue()
+        queue = Queue() # queue object with front ref. to None, rear ref. to None
         queue.enqueue(self.root)
         while not queue.is_empty():
             node = queue.dequeue()
@@ -212,7 +212,7 @@ class Tree:
 
 
 if __name__ == "__main__":
-    tree = Tree()
+    tree = Tree() # tree references to Tree object
     tree.insert(1)
     tree.insert(2)
     tree.insert(3)
