@@ -7,10 +7,10 @@ class LinkedList:
     def __init__(self):
         self.head = None
     
-    # Time complexity = O(n)
-    # Space complexity = O(1)
     def insert(self, data): # data = 1
-        new_node = Node(data)   # node object with data = 1, next = None
+        new_node = Node(data)   
+        # Space complexity = O(1)
+        # node object with data = 1, next = None
         # node object with data = 2, next = None
         # node object with data = 3, next = None
         if not self.head:   # intially True
@@ -19,6 +19,7 @@ class LinkedList:
         current = self.head # current/head -> [1, None]
         # currrent/head -> [1, [2, None]]
         while current.next: # false
+        # Time complexity = O(n)
             current = current.next  # current = [2, None]
         current.next = new_node # [1, [2, [3, None]]]
     
