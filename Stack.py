@@ -33,7 +33,7 @@ class Stack:
         print("None")
 
 if __name__ == "__main__":
-    stack = Stack()
+    stack = Stack() # stack object
     stack.push(1)
     stack.push(2)
     stack.push(3)
