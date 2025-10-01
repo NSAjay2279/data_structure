@@ -6,6 +6,7 @@ int SumOFElements(int A[])  // int A[] is int* A
   int size = sizeof(A) ...
   ...
 }
+
 int main()
 {
   int A[4];
